@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "691404c3-f1c7-4fd4-a3d7-2a19ffad511b",
+		"name": "TestsEntreprise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29166027"
+	},
+	"item": [
+		{
+			"name": "CreationEntreprise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\": \"TVAAA\",\r\n    \"address\": \"saint catherine\",\r\n    \"tvaNumber\": \"BE125688\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/entreprises",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"entreprises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RecuperationEntrepriseAvecTva",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/entreprises/search?tvaNumber=BE125688",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"entreprises",
+						"search"
+					],
+					"query": [
+						{
+							"key": "tvaNumber",
+							"value": "BE125688"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RecuperationToutesEntreprises",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModificationContactAvecId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\": \"Genesis2\",\r\n    \"address\": \"saint catherine\",\r\n    \"tvaNmber\": \"BE125698\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/entreprises/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"entreprises",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
